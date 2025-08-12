@@ -886,13 +886,10 @@
       initializeApp();
     });
     
-    function initializeApp() {
-      // Check login status
-      if (!isLoggedIn) {
-        showLoginModal();
-        return;
-      }
+   function initializeApp() {
+     
       
+       
       // Load saved data from localStorage
       const savedData = localStorage.getItem('inventoryData');
       if (savedData) {
