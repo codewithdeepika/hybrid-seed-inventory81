@@ -15,19 +15,17 @@ let currentUser = localStorage.getItem('currentUser') || 'Admin';
 document.addEventListener('DOMContentLoaded', function() {
   initializeApp();
 });
-
 function initializeApp() {
+  // Remove login logic entirely:
+  
   // Load saved data from localStorage
   const savedData = localStorage.getItem('inventoryData');
   if (savedData) {
     inventoryData = JSON.parse(savedData);
   }
 
-  if (!isLoggedIn) {
-    showLoginModal();
-    return;
-  }
-  
+  // Remove the login check and modal display
+  // Proceed directly to initialize the main app
   setDefaultDates();
   createParticles();
   initCharts();
@@ -37,6 +35,7 @@ function initializeApp() {
   createScrollToTopButton();
   showPageLoadAnimation();
   
+  // Theme handling stays the same
   if (currentTheme === 'dark') {
     document.body.setAttribute('data-theme', 'dark');
     document.querySelector('.theme-toggle').innerHTML = '<i class="fas fa-sun"></i> <span>Light Mode</span>';
@@ -63,7 +62,7 @@ function showLoginModal() {
       </div>
       <form id="loginForm">
         <div class="form-group">
-          <label for="username">Username</label>
+          <label for="">Username</label>
           <input type="text" id="username" required placeholder="Enter username">
         </div>
         <div class="form-group">
