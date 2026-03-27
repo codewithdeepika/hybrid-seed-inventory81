@@ -4,11 +4,11 @@ require('dotenv').config();
 
 // Database configuration
 const dbConfig = {
-  host: 'mysql.railway.internal',
+  host: 'metro.proxy.rlwy.net',
   user: 'root',
   password: 'CrVoNGADaLiIaymHquhOQUYLIOYeZwHf',
   database: 'railway',
-  port: 3306,
+  port: 54447,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
